@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz JS</title>
+    <style>
+      .hidden{
+        display: none;
+      } 
+
+      input[type="radio"]{
+        visibility: hidden;
+      }
+
+      input[type="radio"]:checked+label{
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="opening_window">
+      <h1>Selamat Bermain</h1>
+      <button onclick="startQuiz()">Play Quiz</button>
+    </div>
+
+    <div id="quiz_window" class="hidden">
+      <h1 id="question"></h1>
+
+      <input type="radio" name="choices" id="choices0" data-id="0" />
+      <label for="choices0" id="choicesText0"></label>
+
+      <input type="radio" name="choices" id="choices1" data-id="1" />
+      <label for="choices1" id="choicesText1"></label>
+
+      <input type="radio" name="choices" id="choices2" data-id="2" />
+      <label for="choices2" id="choicesText2"></label>
+
+      <input type="radio" name="choices" id="choices3" data-id="3" />
+      <label for="choices3" id="choicesText3"></label>
+
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="closing_window" class="hidden">
+      <h1>Quiz Selesai</h1>
+      <h2 id="scoreText"></h2>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
